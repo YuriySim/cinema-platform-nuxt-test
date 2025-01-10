@@ -122,7 +122,7 @@ const props = defineProps({
     -webkit-box-orient: vertical;
     font-size: 14px;
     line-height: 16px;
-    max-height: 32px;
+    height: 32px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;

@@ -24,32 +24,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { onMounted } from "vue";
 import Card from "./components/Card.vue";
 
-const data = ref(null);
-const status = ref("idle"); // idle, loading, error
+const { data, status, fetchData } = useFetchData("/data.json");
 
-onMounted(async () => {
-  try {
-    status.value = "loading";
-    const baseUrl = process.env.BASE_URL || "http://localhost:3000";
-
-    const response = await fetch(new URL("/data.json", baseUrl));
-
-    if (!response.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    data.value = await response.json();
-
-    status.value = "success";
-  } catch (error) {
-    console.error(error);
-
-    status.value = "error";
-  }
-});
+onMounted(fetchData); // Launching a request when mounting a component
 </script>
 
 <style module lang="scss">
