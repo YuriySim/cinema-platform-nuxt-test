@@ -22,6 +22,15 @@
   justify-content: center;
   z-index: 1000;
 
+  @media (max-width: 1023px) {
+    padding: 21px 24px;
+    height: 80px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 21px 16px;
+  }
+
   &__content {
     width: 100%;
     display: flex;

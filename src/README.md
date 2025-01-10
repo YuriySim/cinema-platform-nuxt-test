@@ -1,3 +1,19 @@
+# Test project - Cinema platform.
+
+# Nuxt.js 3 using the Composition API and CSS Modules
+
+# Quick installation instructions:
+
+1. git clone https://github.com/YuriySim/cinema-platform-nuxt-test.git
+
+2. cd cinema-platform-nuxt-test/src
+   or
+   cd src
+
+3. npm i
+
+4. npm run dev
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.

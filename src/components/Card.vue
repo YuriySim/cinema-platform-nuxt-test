@@ -59,13 +59,15 @@ const props = defineProps({
     transition: opacity 0.4s ease-in-out;
   }
 
-  &:hover {
-    &::after {
-      opacity: 1;
-    }
+  @media (min-width: 1024px) {
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
 
-    & .card__content {
-      transform: translate(-8px, -8px);
+      & .card__content {
+        transform: translate(-8px, -8px);
+      }
     }
   }
 

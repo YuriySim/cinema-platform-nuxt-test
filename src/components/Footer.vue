@@ -27,11 +27,27 @@
   display: flex;
   justify-content: center;
 
+  @media (max-width: 1023px) {
+    padding: 31px 24px;
+    height: auto;
+  }
+
+  @media (max-width: 767px) {
+    padding: 31px 16px;
+  }
+
   &__content {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: 16px;
+      align-items: start;
+    }
   }
 
   &__container {

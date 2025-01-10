@@ -59,5 +59,17 @@ onMounted(async () => {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   gap: 16px;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 479px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 </style>

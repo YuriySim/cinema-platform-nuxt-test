@@ -23,11 +23,23 @@ import Footer from "./components/Footer.vue";
   min-height: 100vh;
   padding-top: 100px;
   background: rgba(0, 0, 0, 0.6);
+
+  @media (max-width: 1023px) {
+    padding-top: 80px;
+  }
 }
 
 .container {
   width: 100%;
   flex: 1;
   padding: 32px 48px;
+
+  @media (max-width: 1023px) {
+    padding: 24px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 24px 16px;
+  }
 }
 </style>

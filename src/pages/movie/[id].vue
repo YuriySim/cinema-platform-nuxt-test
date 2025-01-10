@@ -125,6 +125,15 @@ onMounted(async () => {
   gap: 64px;
   color: #fff;
 
+  @media (max-width: 1023px) {
+    gap: 48px;
+  }
+
+  @media (max-width: 767px) {
+    gap: 24px;
+    flex-direction: column;
+  }
+
   &__left {
     position: relative;
     max-width: 240px;
@@ -137,6 +146,14 @@ onMounted(async () => {
     position: sticky;
     top: 132px;
     cursor: default;
+
+    @media (max-width: 1023px) {
+      top: 104px;
+    }
+
+    @media (max-width: 767px) {
+      gap: 16px;
+    }
   }
 
   &__title {
@@ -151,6 +168,10 @@ onMounted(async () => {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 767px) {
+      order: 99;
+    }
   }
 
   &__img {
@@ -226,8 +247,10 @@ onMounted(async () => {
     border-bottom: 1px solid white;
     transition: all 0.4s ease-in-out;
 
-    &:hover {
-      border-bottom: 1px solid transparent;
+    @media (min-width: 1024px) {
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
     }
   }
 }
